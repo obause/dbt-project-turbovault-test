@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg__tpch__nation
+    description: "Staging model for Nation from TPCH"
+    config:
+      tags: ['staging', 'tpch']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: HK_NATION_REGION_H
+        description: "Hash key"
+      - name: HK_NATION_REGION_H
+        description: "Hash key"
+      - name: HK_NATION_H
+        description: "Hash key"
+      - name: HK_REGION_H
+        description: "Hash key"
+      - name: HK_nation_test_link_l
+        description: "Hash key"
+      - name: HK_NATION_RENAMED_H
+        description: "Hash key"
+      - name: HK_nation_test_link_l
+        description: "Hash key"
+      - name: hd_nation_2nd_rs
+        description: "Hash diff for nation_2nd_rs"
+      - name: hd_nation_rs
+        description: "Hash diff for nation_rs"

@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: PART_N_S_v1
+    description: "Standard satellite v1 (with load_end_date) for PART_H"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'Parts']
+    columns:
+      - name: HK_PART_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_PART_N_S
+        description: "Hash diff for change detection"
+      - name: P_BRAND
+        description: "Payload column"
+      - name: P_COMMENT
+        description: "Payload column"
+      - name: P_CONTAINER
+        description: "Payload column"
+      - name: P_MFGR
+        description: "Payload column"
+      - name: P_NAME
+        description: "Payload column"
+      - name: P_RETAILPRICE
+        description: "Payload column"
+      - name: P_SIZE
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

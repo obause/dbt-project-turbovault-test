@@ -1,0 +1,168 @@
+version: 2
+
+sources:
+  - name: tpch
+    schema: TPCH_SF1
+    tables:
+      - name: Customer
+        description: "Source table from "
+        columns:
+          - name: C_ACCTBAL
+            data_type:
+          - name: C_ADDRESS
+            data_type:
+          - name: C_COMMENT
+            data_type:
+          - name: C_CUSTKEY
+            data_type:
+          - name: C_MKTSEGMENT
+            data_type:
+          - name: C_name
+            data_type:
+          - name: C_NAME
+            data_type:
+          - name: c_nationkey
+            data_type:
+          - name: c_phone
+            data_type:
+          - name: C_PHONE
+            data_type:
+      - name: LineItem
+        description: "Source table from "
+        columns:
+          - name: l_comment
+            data_type:
+          - name: L_COMMENT
+            data_type:
+          - name: L_COMMITDATE
+            data_type:
+          - name: L_DISCOUNT
+            data_type:
+          - name: L_EXTENDEDPRICE
+            data_type:
+          - name: L_LINENUMBER
+            data_type:
+          - name: L_LINESTATUS
+            data_type:
+          - name: L_ORDERKEY
+            data_type:
+          - name: L_PARTKEY
+            data_type:
+          - name: L_QUANTITY
+            data_type:
+          - name: L_RECEIPTDATE
+            data_type:
+          - name: L_RETURNFLAG
+            data_type:
+          - name: L_SHIPDATE
+            data_type:
+          - name: l_shipinstruct
+            data_type:
+          - name: L_SHIPINSTRUCT
+            data_type:
+          - name: l_shipmode
+            data_type:
+          - name: L_SHIPMODE
+            data_type:
+          - name: L_SUPPKEY
+            data_type:
+          - name: L_TAX
+            data_type:
+      - name: Nation
+        description: "Source table from "
+        columns:
+          - name: n_comment
+            data_type:
+          - name: n_name
+            data_type:
+          - name: n_nationkey
+            data_type:
+          - name: N_NATIONKEY
+            data_type:
+          - name: n_regionkey
+            data_type:
+          - name: N_REGIONKEY
+            data_type:
+      - name: Orders
+        description: "Source table from "
+        columns:
+          - name: O_CLERK
+            data_type:
+          - name: O_COMMENT
+            data_type:
+          - name: O_CUSTKEY
+            data_type:
+          - name: O_ORDERDATE
+            data_type:
+          - name: O_ORDERKEY
+            data_type:
+          - name: O_ORDERPRIORITY
+            data_type:
+          - name: O_ORDERSTATUS
+            data_type:
+          - name: O_SHIPPRIORITY
+            data_type:
+          - name: O_TOTALPRICE
+            data_type:
+      - name: Part
+        description: "Source table from "
+        columns:
+          - name: discount_amount
+            data_type:
+          - name: discount_country
+            data_type:
+          - name: discount_level
+            data_type:
+          - name: discount_minimum_basket_price
+            data_type:
+          - name: P_BRAND
+            data_type:
+          - name: P_COMMENT
+            data_type:
+          - name: P_CONTAINER
+            data_type:
+          - name: P_MFGR
+            data_type:
+          - name: P_NAME
+            data_type:
+          - name: P_PARTKEY
+            data_type:
+          - name: P_RETAILPRICE
+            data_type:
+          - name: P_SIZE
+            data_type:
+      - name: PartSupp
+        description: "Source table from "
+        columns:
+          - name: PS_AVAILQTY
+            data_type:
+          - name: PS_COMMENT
+            data_type:
+          - name: PS_PARTKEY
+            data_type:
+          - name: PS_SUPPKEY
+            data_type:
+          - name: PS_SUPPLYCOST
+            data_type:
+      - name: Region
+        description: "Source table from "
+        columns:
+          - name: r_name
+            data_type:
+          - name: R_NAME
+            data_type:
+          - name: r_regionkey
+            data_type:
+          - name: R_REGIONKEY
+            data_type:
+      - name: Supplier
+        description: "Source table from "
+        columns:
+          - name: S_ACCTBAL
+            data_type:
+          - name: S_ADDRESS
+            data_type:
+          - name: S_NAME
+            data_type:
+          - name: S_SUPPKEY
+            data_type:

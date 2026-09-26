@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: CUSTOMER_N_S_v0
+    description: "Standard satellite for CUSTOMER_H"
+    config:
+      tags: ['satellite', 'standard', 'raw_vault', 'Customers']
+    columns:
+      - name: HK_CUSTOMER_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_CUSTOMER_N_S
+        description: "Hash diff for change detection"
+      - name: C_COMMENT
+        description: "Payload column"
+      - name: C_MKTSEGMENT
+        description: "Payload column"
+      - name: C_ACCTBAL
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

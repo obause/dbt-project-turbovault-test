@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: SUPPLIER_H
+    description: "Standard hub for SUPPLIER_H"
+    config:
+      tags: ['hub', 'raw_vault', 'Suppliers']
+    columns:
+      - name: HK_SUPPLIER_H
+        description: "Hash key for SUPPLIER_H"
+        data_tests:
+          - unique
+          - not_null
+      - name: S_SUPPKEY
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

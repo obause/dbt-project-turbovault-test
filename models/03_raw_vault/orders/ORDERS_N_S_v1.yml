@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: ORDERS_N_S_v1
+    description: "Standard satellite v1 (with load_end_date) for ORDERS_H"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'Orders']
+    columns:
+      - name: HK_ORDER_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_ORDERS_N_S
+        description: "Hash diff for change detection"
+      - name: CLERK
+        description: "Payload column"
+      - name: COMMENT
+        description: "Payload column"
+      - name: ORDERDATE
+        description: "Payload column"
+      - name: ORDERPRIORITY
+        description: "Payload column"
+      - name: ORDERSTATUS
+        description: "Payload column"
+      - name: SHIPPRIORITY
+        description: "Payload column"
+      - name: TOTALPRICE
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

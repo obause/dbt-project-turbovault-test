@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: ORDERS_CUSTOMERS_L
+    description: "Standard link for ORDERS_CUSTOMERS_L"
+    config:
+      tags: ['link', 'raw_vault', 'Orders']
+    columns:
+      - name: HK_ORDERS_CUSTOMERS_L
+        description: "Link hash key"
+        data_tests:
+          - unique
+          - not_null
+      - name: HK_ORDER_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: HK_CUSTOMER_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg__tpch__region
+    description: "Staging model for Region from TPCH"
+    config:
+      tags: ['staging', 'tpch']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: HK_NATION_REGION_H
+        description: "Hash key"
+      - name: HK_REGION_H
+        description: "Hash key"

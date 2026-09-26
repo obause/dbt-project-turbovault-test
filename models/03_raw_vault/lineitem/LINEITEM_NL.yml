@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: LINEITEM_NL
+    description: "Non-Historized link for LINEITEM_NL"
+    config:
+      tags: ['link', 'non_historized', 'raw_vault', 'LineItem']
+    columns:
+      - name: HK_LINEITEM_NL
+        description: "Link hash key"
+        data_tests:
+          - unique
+          - not_null
+      - name: HK_PART_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: HK_ORDER_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: HK_SUPPLIER_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: L_QUANTITY
+        description: "Payload column"
+      - name: L_EXTENDEDPRICE
+        description: "Payload column"
+      - name: L_DISCOUNT
+        description: "Payload column"
+      - name: L_TAX
+        description: "Payload column"
+      - name: L_RETURNFLAG
+        description: "Payload column"
+      - name: L_LINESTATUS
+        description: "Payload column"
+      - name: L_SHIPDATE
+        description: "Payload column"
+      - name: L_COMMITDATE
+        description: "Payload column"
+      - name: L_RECEIPTDATE
+        description: "Payload column"
+      - name: L_SHIPINSTRUCT
+        description: "Payload column"
+      - name: L_SHIPMODE
+        description: "Payload column"
+      - name: L_COMMENT
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

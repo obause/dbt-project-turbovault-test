@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: nation_2nd_rs_v1
+    description: "Reference satellite v1 (with load_end_date) for nation_rh"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault']
+    columns:
+      - name: n_nationkey
+        description: "Parent reference key"
+        data_tests:
+          - not_null
+      - name: hd_nation_2nd_rs
+        description: "Hash diff for change detection"
+      - name: n_comment
+        description: "Payload column"
+      - name: n_name
+        description: "Payload column"
+      - name: n_regionkey
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

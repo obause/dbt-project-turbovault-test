@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg__tpch__lineitem
+    description: "Staging model for LineItem from TPCH"
+    config:
+      tags: ['staging', 'tpch']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: HK_CUSTOMER_H
+        description: "Hash key"
+      - name: HK_PART_H
+        description: "Hash key"
+      - name: HK_ORDER_H
+        description: "Hash key"
+      - name: HK_SUPPLIER_H
+        description: "Hash key"
+      - name: HK_LINEITEM_NL
+        description: "Hash key"

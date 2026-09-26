@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg__tpch__supplier
+    description: "Staging model for Supplier from TPCH"
+    config:
+      tags: ['staging', 'tpch']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: HK_SUPPLIER_H
+        description: "Hash key"
+      - name: hd_SUPPLIER_N_S
+        description: "Hash diff for SUPPLIER_N_S"
+      - name: hd_SUPPLIER_P_S
+        description: "Hash diff for SUPPLIER_P_S"

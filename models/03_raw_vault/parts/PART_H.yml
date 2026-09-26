@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: PART_H
+    description: "Standard hub for PART_H"
+    config:
+      tags: ['hub', 'raw_vault', 'Parts']
+    columns:
+      - name: HK_PART_H
+        description: "Hash key for PART_H"
+        data_tests:
+          - unique
+          - not_null
+      - name: P_PARTKEY
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

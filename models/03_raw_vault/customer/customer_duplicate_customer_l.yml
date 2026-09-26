@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: customer_duplicate_customer_l
+    description: "Standard link for customer_duplicate_customer_l"
+    config:
+      tags: ['link', 'raw_vault', 'Customer']
+    columns:
+      - name: hk_customer_duplicate_customer_l
+        description: "Link hash key"
+        data_tests:
+          - unique
+          - not_null
+      - name: HK_CUSTOMER_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: HK_CUSTOMER_DUPLICATE_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

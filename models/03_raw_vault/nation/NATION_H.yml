@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: NATION_H
+    description: "Standard hub for NATION_H"
+    config:
+      tags: ['hub', 'raw_vault', 'Nation']
+    columns:
+      - name: HK_NATION_H
+        description: "Hash key for NATION_H"
+        data_tests:
+          - unique
+          - not_null
+      - name: N_NATIONKEY
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

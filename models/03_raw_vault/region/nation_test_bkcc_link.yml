@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: nation_test_bkcc_link
+    description: "Standard link for nation_test_bkcc_link"
+    config:
+      tags: ['link', 'raw_vault', 'Region']
+    columns:
+      - name: HK_nation_test_link_l
+        description: "Link hash key"
+        data_tests:
+          - unique
+          - not_null
+      - name: HK_REGION_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: HK_NATION_REGION_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

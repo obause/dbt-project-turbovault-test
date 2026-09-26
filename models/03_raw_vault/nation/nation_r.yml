@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: nation_r
+    description: "Reference table combining nation_rh with satellites"
+    config:
+      tags: ['reference_table', 'raw_vault']

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: SUPPLIER_P_S_v1
+    description: "Standard satellite v1 (with load_end_date) for SUPPLIER_H"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'Suppliers']
+    columns:
+      - name: HK_SUPPLIER_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_SUPPLIER_P_S
+        description: "Hash diff for change detection"
+      - name: S_ADDRESS
+        description: "Payload column"
+      - name: S_NAME
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

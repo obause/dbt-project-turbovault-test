@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: SUPPLIER_N_S_v0
+    description: "Standard satellite for SUPPLIER_H"
+    config:
+      tags: ['satellite', 'standard', 'raw_vault', 'Suppliers']
+    columns:
+      - name: HK_SUPPLIER_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_SUPPLIER_N_S
+        description: "Hash diff for change detection"
+      - name: S_ACCTBAL
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

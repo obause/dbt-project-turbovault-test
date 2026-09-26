@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: lineitem_nhs_v0
+    description: "Non-historized satellite for LINEITEM_NL"
+    config:
+      tags: ['satellite', 'non_historized', 'raw_vault', 'Lineitem']
+    columns:
+      - name: HK_LINEITEM_NL
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: l_comment
+        description: "Payload column"
+      - name: l_shipisntruct
+        description: "Payload column"
+      - name: l_shipmode
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

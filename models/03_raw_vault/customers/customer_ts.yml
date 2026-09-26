@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: customer_ts
+    description: "Record tracking satellite for CUSTOMER_H"
+    config:
+      tags: ['satellite', 'record_tracking', 'raw_vault', 'Customers']
+    columns:
+      - name: HK_CUSTOMER_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: rsrc
+        description: "Record source"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: ledts
+        description: "Load end date timestamp"
+      - name: tracking_status
+        description: "Record tracking status"

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: PART_SUPPLIER_N_S_v1
+    description: "Standard satellite v1 (with load_end_date) for PART_SUPPLIER_L"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'Parts']
+    columns:
+      - name: HK_PART_SUPPLIER_L
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_PART_SUPPLIER_N_S
+        description: "Hash diff for change detection"
+      - name: PS_AVAILQTY
+        description: "Payload column"
+      - name: PS_COMMENT
+        description: "Payload column"
+      - name: PS_SUPPLYCOST
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

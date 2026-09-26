@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: customer_es
+    description: "Effectivity satellite for CUSTOMER_H"
+    config:
+      tags: ['satellite', 'effectivity', 'raw_vault', 'Customers']
+    columns:
+      - name: HK_CUSTOMER_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: is_active
+        description: "Effectivity flag indicating if the relationship is active"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

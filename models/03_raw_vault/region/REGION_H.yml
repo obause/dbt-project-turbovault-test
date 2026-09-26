@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: REGION_H
+    description: "Standard hub for REGION_H"
+    config:
+      tags: ['hub', 'raw_vault', 'Region']
+    columns:
+      - name: HK_REGION_H
+        description: "Hash key for REGION_H"
+        data_tests:
+          - unique
+          - not_null
+      - name: REGION_NAME
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

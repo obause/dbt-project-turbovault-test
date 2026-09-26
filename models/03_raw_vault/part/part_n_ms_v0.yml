@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: part_n_ms_v0
+    description: "Multi-active satellite for PART_H"
+    config:
+      tags: ['satellite', 'multi_active', 'raw_vault', 'Part']
+    columns:
+      - name: HK_PART_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_part_n_ms
+        description: "Hash diff for change detection"
+      - name: discount_amount
+        description: "Payload column"
+      - name: discount_minimum_basket_price
+        description: "Payload column"
+      - name: discount_level
+        description: "Payload column (multi-active key)"
+      - name: discount_country
+        description: "Payload column (multi-active key)"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg__tpch__customer
+    description: "Staging model for Customer from TPCH"
+    config:
+      tags: ['staging', 'tpch']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: HK_CUSTOMER_H
+        description: "Hash key"
+      - name: hd_customer_n_ms
+        description: "Hash diff for customer_n_ms"
+      - name: hd_CUSTOMER_N_S
+        description: "Hash diff for CUSTOMER_N_S"
+      - name: hd_CUSTOMER_P_S
+        description: "Hash diff for CUSTOMER_P_S"

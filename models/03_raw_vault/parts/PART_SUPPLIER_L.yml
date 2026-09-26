@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: PART_SUPPLIER_L
+    description: "Standard link for PART_SUPPLIER_L"
+    config:
+      tags: ['link', 'raw_vault', 'Parts']
+    columns:
+      - name: HK_PART_SUPPLIER_L
+        description: "Link hash key"
+        data_tests:
+          - unique
+          - not_null
+      - name: HK_PART_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: HK_SUPPLIER_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

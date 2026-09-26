@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: part_n_ms_v1
+    description: "Multi_active satellite v1 (with load_end_date) for PART_H"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'Part']
+    columns:
+      - name: HK_PART_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_part_n_ms
+        description: "Hash diff for change detection"
+      - name: discount_amount
+        description: "Payload column"
+      - name: discount_minimum_basket_price
+        description: "Payload column"
+      - name: discount_level
+        description: "Payload column"
+      - name: discount_country
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

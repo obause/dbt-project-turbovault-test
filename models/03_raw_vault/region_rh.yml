@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: region_rh
+    description: "Reference hub for region_rh"
+    config:
+      tags: ['hub', 'reference', 'raw_vault']
+    columns:
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: CUSTOMER_H
+    description: "Standard hub for CUSTOMER_H"
+    config:
+      tags: ['hub', 'raw_vault', 'Customers']
+    columns:
+      - name: HK_CUSTOMER_H
+        description: "Hash key for CUSTOMER_H"
+        data_tests:
+          - unique
+          - not_null
+      - name: C_CUSTKEY
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

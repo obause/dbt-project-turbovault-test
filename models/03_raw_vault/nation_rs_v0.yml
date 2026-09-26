@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: nation_rs_v0
+    description: "Reference satellite for nation_rh"
+    config:
+      tags: ['satellite', 'reference', 'raw_vault']
+    columns:
+      - name: n_nationkey
+        description: "Parent reference key"
+        data_tests:
+          - not_null
+      - name: hd_nation_rs
+        description: "Hash diff for change detection"
+      - name: n_comment
+        description: "Payload column"
+      - name: n_name
+        description: "Payload column"
+      - name: n_regionkey
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

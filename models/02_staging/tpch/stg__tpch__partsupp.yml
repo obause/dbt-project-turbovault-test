@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg__tpch__partsupp
+    description: "Staging model for PartSupp from TPCH"
+    config:
+      tags: ['staging', 'tpch']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: HK_PART_H
+        description: "Hash key"
+      - name: HK_SUPPLIER_H
+        description: "Hash key"
+      - name: HK_PART_SUPPLIER_L
+        description: "Hash key"
+      - name: hd_PART_SUPPLIER_N_S
+        description: "Hash diff for PART_SUPPLIER_N_S"

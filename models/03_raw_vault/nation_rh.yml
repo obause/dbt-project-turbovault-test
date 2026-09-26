@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: nation_rh
+    description: "Reference hub for nation_rh"
+    config:
+      tags: ['hub', 'reference', 'raw_vault']
+    columns:
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

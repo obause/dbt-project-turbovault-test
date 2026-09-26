@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: customer_n_ms_v1
+    description: "Multi_active satellite v1 (with load_end_date) for CUSTOMER_H"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'Customer']
+    columns:
+      - name: HK_CUSTOMER_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_customer_n_ms
+        description: "Hash diff for change detection"
+      - name: customer_name
+        description: "Payload column"
+      - name: c_nationkey
+        description: "Payload column"
+      - name: c_phone
+        description: "Payload column"
+      - name: C_MKTSEGMENT
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

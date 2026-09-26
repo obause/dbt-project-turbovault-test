@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: ORDERS_H
+    description: "Standard hub for ORDERS_H"
+    config:
+      tags: ['hub', 'raw_vault', 'Orders']
+    columns:
+      - name: HK_ORDER_H
+        description: "Hash key for ORDERS_H"
+        data_tests:
+          - unique
+          - not_null
+      - name: O_ORDERKEY
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: test
+    database: test
+    schema: test
+    tables:
+      - name: TEST_TABLE
+        description: "Source table from "
+        columns:
+          - name: col_a
+            data_type: VARCHAR(255)
+          - name: col_b
+            data_type: VARCHAR(255)
+          - name: col_c
+            data_type: VARCHAR(255)
+          - name: col_d
+            data_type: VARCHAR(255)
+          - name: ldts
+            data_type: VARCHAR(255)
+          - name: rsrc
+            data_type: VARCHAR(255)

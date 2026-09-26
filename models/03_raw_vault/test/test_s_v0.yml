@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: test_s_v0
+    description: "Standard satellite for test_h"
+    config:
+      tags: ['satellite', 'standard', 'raw_vault', 'Test']
+    columns:
+      - name: hk_test_h
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_test_s
+        description: "Hash diff for change detection"
+      - name: col_b
+        description: "Payload column"
+      - name: col_c
+        description: "Payload column"
+      - name: col_d
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

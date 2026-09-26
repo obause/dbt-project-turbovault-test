@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg__test__test_table
+    description: "Staging model for TEST_TABLE from TEST"
+    config:
+      tags: ['staging', 'test']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: hk_test_h
+        description: "Hash key"
+      - name: hd_test_s
+        description: "Hash diff for test_s"

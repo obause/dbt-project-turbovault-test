@@ -6,6 +6,7 @@
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__nation
+      rsrc_static: "Nation"
       bk_columns:
           - N_NATIONKEY
 hashkey: HK_NATION_H

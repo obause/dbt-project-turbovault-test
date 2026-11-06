@@ -6,6 +6,7 @@
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__orders
+      rsrc_static: "Orders"
 link_hashkey: hk_customer_duplicate_customer_l
 foreign_hashkeys:
     - HK_CUSTOMER_H

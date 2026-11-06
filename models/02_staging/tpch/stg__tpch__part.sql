@@ -6,8 +6,8 @@
 {%- set yaml_metadata -%}
 source_model:
     tpch: Part
-ldts: 'sysdate()'
-rsrc: '!Part'
+ldts: "sysdate()"
+rsrc: "!Part"
 hashed_columns:
     HK_PART_H:
         - P_PARTKEY

@@ -6,10 +6,12 @@
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__nation
+      rsrc_static: "Nation"
       bk_columns:
           - N_NATIONKEY
           - N_REGIONKEY
     - name: stg__tpch__region
+      rsrc_static: "Region"
       bk_columns:
           - R_REGIONKEY
           - R_REGIONKEY

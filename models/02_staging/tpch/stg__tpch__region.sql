@@ -6,8 +6,8 @@
 {%- set yaml_metadata -%}
 source_model:
     tpch: Region
-ldts: 'sysdate()'
-rsrc: '!Region'
+ldts: "sysdate()"
+rsrc: "!Region"
 hashed_columns:
     HK_NATION_REGION_H:
         - R_REGIONKEY

@@ -6,6 +6,7 @@
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__partsupp
+      rsrc_static: "PartSupp"
 link_hashkey: HK_PART_SUPPLIER_L
 foreign_hashkeys:
     - HK_PART_H

@@ -6,6 +6,7 @@
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__supplier
+      rsrc_static: "Supplier"
       bk_columns:
           - S_SUPPKEY
 hashkey: HK_SUPPLIER_H

@@ -28,3 +28,5 @@ models:
         description: "Hash diff for nation_2nd_rs"
       - name: hd_nation_rs
         description: "Hash diff for nation_rs"
+      - name: hd_nation_s
+        description: "Hash diff for nation_s"

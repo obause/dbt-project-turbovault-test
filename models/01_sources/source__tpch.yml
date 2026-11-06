@@ -5,7 +5,7 @@ sources:
     schema: TPCH_SF1
     tables:
       - name: Customer
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
           - name: C_ACCTBAL
             data_type:
@@ -28,7 +28,7 @@ sources:
           - name: C_PHONE
             data_type:
       - name: LineItem
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
           - name: l_comment
             data_type:
@@ -69,7 +69,7 @@ sources:
           - name: L_TAX
             data_type:
       - name: Nation
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
           - name: n_comment
             data_type:
@@ -84,7 +84,7 @@ sources:
           - name: N_REGIONKEY
             data_type:
       - name: Orders
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
           - name: O_CLERK
             data_type:
@@ -105,7 +105,7 @@ sources:
           - name: O_TOTALPRICE
             data_type:
       - name: Part
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
           - name: discount_amount
             data_type:
@@ -132,7 +132,7 @@ sources:
           - name: P_SIZE
             data_type:
       - name: PartSupp
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
           - name: PS_AVAILQTY
             data_type:
@@ -145,8 +145,10 @@ sources:
           - name: PS_SUPPLYCOST
             data_type:
       - name: Region
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
+          - name: R_COMMENT
+            data_type: VARCHAR(152)
           - name: r_name
             data_type:
           - name: R_NAME
@@ -156,7 +158,7 @@ sources:
           - name: R_REGIONKEY
             data_type:
       - name: Supplier
-        description: "Source table from "
+        description: "Source table from TPCH"
         columns:
           - name: S_ACCTBAL
             data_type:

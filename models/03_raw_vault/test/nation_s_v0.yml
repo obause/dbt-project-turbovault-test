@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: nation_s_v0
+    description: "Standard satellite for NATION_H"
+    config:
+      tags: ['satellite', 'standard', 'raw_vault', 'Test']
+    columns:
+      - name: HK_NATION_H
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_nation_s
+        description: "Hash diff for change detection"
+      - name: n_name
+        description: "Payload column"
+      - name: n_comment
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

@@ -6,8 +6,8 @@
 {%- set yaml_metadata -%}
 source_model:
     tpch: LineItem
-ldts: 'sysdate()'
-rsrc: '!LineItem'
+ldts: "sysdate()"
+rsrc: "!LineItem"
 hashed_columns:
     HK_CUSTOMER_H:
         - L_SUPPKEY
@@ -24,8 +24,8 @@ hashed_columns:
         - L_LINENUMBER
 derived_columns:
     l_shipisntruct:
-      value: 'l_shipinstruct'
-      src_cols_required: 'l_shipinstruct'
+      value: "l_shipinstruct"
+      src_cols_required: "l_shipinstruct"
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}

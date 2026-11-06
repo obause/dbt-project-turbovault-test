@@ -6,6 +6,7 @@
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__nation
+      rsrc_static: "Nation"
 link_hashkey: HK_nation_test_link_l
 foreign_hashkeys:
     - HK_REGION_H

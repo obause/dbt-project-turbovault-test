@@ -6,8 +6,8 @@
 {%- set yaml_metadata -%}
 source_model:
     tpch: Supplier
-ldts: 'sysdate()'
-rsrc: '!Supplier'
+ldts: "sysdate()"
+rsrc: "!Supplier"
 hashed_columns:
     HK_SUPPLIER_H:
         - S_SUPPKEY

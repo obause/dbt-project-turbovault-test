@@ -6,6 +6,7 @@
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__part
+      rsrc_static: "Part"
       bk_columns:
           - P_PARTKEY
 hashkey: HK_PART_H

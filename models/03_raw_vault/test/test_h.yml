@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: test_h
+    description: "Standard hub for test_h"
+    config:
+      tags: ['hub', 'raw_vault', 'Test']
+    columns:
+      - name: hk_test_h
+        description: "Hash key for test_h"
+        data_tests:
+          - unique
+          - not_null
+      - name: col_a
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

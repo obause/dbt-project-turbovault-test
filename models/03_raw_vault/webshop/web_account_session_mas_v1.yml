@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: web_account_session_mas_v1
+    description: "Multi_active satellite v1 (with load_end_date) for web_account_h"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'WebShop']
+    columns:
+      - name: hk_web_account_h
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_web_account_session_mas
+        description: "Hash diff for change detection"
+      - name: session_id
+        description: "Payload column"
+      - name: user_agent
+        description: "Payload column"
+      - name: started_at
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

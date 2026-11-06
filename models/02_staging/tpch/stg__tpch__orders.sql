@@ -6,8 +6,8 @@
 {%- set yaml_metadata -%}
 source_model:
     tpch: Orders
-ldts: 'sysdate()'
-rsrc: '!Orders'
+ldts: "sysdate()"
+rsrc: "!Orders"
 hashed_columns:
     HK_ORDER_H:
         - O_ORDERKEY
@@ -34,26 +34,26 @@ hashed_columns:
             - TOTALPRICE
 derived_columns:
     CLERK:
-      value: 'O_CLERK'
-      src_cols_required: 'O_CLERK'
+      value: "O_CLERK"
+      src_cols_required: "O_CLERK"
     COMMENT:
-      value: 'O_COMMENT'
-      src_cols_required: 'O_COMMENT'
+      value: "O_COMMENT"
+      src_cols_required: "O_COMMENT"
     ORDERDATE:
-      value: 'O_ORDERDATE'
-      src_cols_required: 'O_ORDERDATE'
+      value: "O_ORDERDATE"
+      src_cols_required: "O_ORDERDATE"
     ORDERPRIORITY:
-      value: 'O_ORDERPRIORITY'
-      src_cols_required: 'O_ORDERPRIORITY'
+      value: "O_ORDERPRIORITY"
+      src_cols_required: "O_ORDERPRIORITY"
     ORDERSTATUS:
-      value: 'O_ORDERSTATUS'
-      src_cols_required: 'O_ORDERSTATUS'
+      value: "O_ORDERSTATUS"
+      src_cols_required: "O_ORDERSTATUS"
     SHIPPRIORITY:
-      value: 'O_SHIPPRIORITY'
-      src_cols_required: 'O_SHIPPRIORITY'
+      value: "O_SHIPPRIORITY"
+      src_cols_required: "O_SHIPPRIORITY"
     TOTALPRICE:
-      value: 'O_TOTALPRICE'
-      src_cols_required: 'O_TOTALPRICE'
+      value: "O_TOTALPRICE"
+      src_cols_required: "O_TOTALPRICE"
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}

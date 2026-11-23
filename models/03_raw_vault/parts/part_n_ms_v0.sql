@@ -1,6 +1,5 @@
 {{ config(
-    materialized='incremental',
-    tags=['satellite', 'multi_active', 'raw_vault', 'Part']
+    tags=['satellite', 'multi_active', 'raw_vault', 'Parts']
 ) }}
 
 {%- set yaml_metadata -%}

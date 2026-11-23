@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: web_order_item_nhl
+    description: "Non-Historized link for web_order_item_nhl"
+    config:
+      tags: ['link', 'non_historized', 'raw_vault', 'WebShop']
+    columns:
+      - name: hk_web_order_item_nhl
+        description: "Link hash key"
+        data_tests:
+          - unique
+          - not_null
+      - name: hk_web_order_h
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: HK_PART_H
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: quantity
+        description: "Payload column"
+      - name: unit_price
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

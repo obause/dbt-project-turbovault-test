@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: web_order_account_l
+    description: "Standard link for web_order_account_l"
+    config:
+      tags: ['link', 'raw_vault', 'WebShop']
+    columns:
+      - name: hk_web_order_account_l
+        description: "Link hash key"
+        data_tests:
+          - unique
+          - not_null
+      - name: hk_web_order_h
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: hk_web_account_h
+        description: "Foreign key to hub"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

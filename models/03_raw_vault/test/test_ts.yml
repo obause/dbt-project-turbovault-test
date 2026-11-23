@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: test_ts
+    description: "Record tracking satellite for test_h"
+    config:
+      tags: ['satellite', 'record_tracking', 'raw_vault', 'Test']
+    columns:
+      - name: hk_test_h
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: rsrc
+        description: "Record source"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: ledts
+        description: "Load end date timestamp"
+      - name: tracking_status
+        description: "Record tracking status"

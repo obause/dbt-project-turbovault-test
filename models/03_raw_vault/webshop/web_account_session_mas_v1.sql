@@ -1,15 +1,14 @@
 {{ config(
     materialized='view',
-    tags=['satellite', 'v1', 'raw_vault', 'Part']
+    tags=['satellite', 'v1', 'raw_vault', 'WebShop']
 ) }}
 
 {%- set yaml_metadata -%}
-sat_v0: part_n_ms_v0
-hashkey: HK_PART_H
-hashdiff: hd_part_n_ms
+sat_v0: web_account_session_mas_v0
+hashkey: hk_web_account_h
+hashdiff: hd_web_account_session_mas
 ma_attribute:
-    - discount_level
-    - discount_country
+    - session_id
 add_is_current_flag: true
 {%- endset -%}
 

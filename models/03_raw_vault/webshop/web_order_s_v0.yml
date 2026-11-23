@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: web_order_s_v0
+    description: "Standard satellite for web_order_h"
+    config:
+      tags: ['satellite', 'standard', 'raw_vault', 'WebShop']
+    columns:
+      - name: hk_web_order_h
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_web_order_s
+        description: "Hash diff for change detection"
+      - name: channel
+        description: "Payload column"
+      - name: status
+        description: "Payload column"
+      - name: total_amount
+        description: "Payload column"
+      - name: placed_at
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

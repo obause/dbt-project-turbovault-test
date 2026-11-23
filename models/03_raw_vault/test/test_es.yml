@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: test_es
+    description: "Effectivity satellite for test_h"
+    config:
+      tags: ['satellite', 'effectivity', 'raw_vault', 'Test']
+    columns:
+      - name: hk_test_h
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: is_active
+        description: "Effectivity flag indicating if the relationship is active"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

@@ -1,13 +1,12 @@
 {{ config(
-    materialized='view',
     tags=['staging', 'tpch']
 ) }}
 
 {%- set yaml_metadata -%}
 source_model:
     tpch: Nation
-ldts: 'sysdate()'
-rsrc: '!Nation'
+ldts: "sysdate()"
+rsrc: "!Nation"
 hashed_columns:
     HK_NATION_REGION_H:
         - N_NATIONKEY
@@ -40,6 +39,11 @@ hashed_columns:
             - n_comment
             - n_name
             - n_regionkey
+    hd_nation_s:
+        is_hashdiff: true
+        columns:
+            - n_name
+            - n_comment
 {%- endset -%}
 
 {{ datavault4dbt.stage(yaml_metadata=yaml_metadata) }}

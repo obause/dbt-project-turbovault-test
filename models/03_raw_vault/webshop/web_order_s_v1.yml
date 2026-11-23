@@ -1,24 +1,24 @@
 version: 2
 
 models:
-  - name: customer_n_ms_v1
-    description: "Multi_active satellite v1 (with load_end_date) for CUSTOMER_H"
+  - name: web_order_s_v1
+    description: "Standard satellite v1 (with load_end_date) for web_order_h"
     config:
-      tags: ['satellite', 'v1', 'raw_vault', 'Customer']
+      tags: ['satellite', 'v1', 'raw_vault', 'WebShop']
     columns:
-      - name: HK_CUSTOMER_H
+      - name: hk_web_order_h
         description: "Parent entity hash key"
         data_tests:
           - not_null
-      - name: hd_customer_n_ms
+      - name: hd_web_order_s
         description: "Hash diff for change detection"
-      - name: customer_name
+      - name: channel
         description: "Payload column"
-      - name: c_nationkey
+      - name: status
         description: "Payload column"
-      - name: c_phone
+      - name: total_amount
         description: "Payload column"
-      - name: C_MKTSEGMENT
+      - name: placed_at
         description: "Payload column"
       - name: ldts
         description: "Load date timestamp"

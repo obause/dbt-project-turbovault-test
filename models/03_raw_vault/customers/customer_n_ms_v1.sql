@@ -1,6 +1,6 @@
 {{ config(
     materialized='view',
-    tags=['satellite', 'v1', 'raw_vault', 'Customer']
+    tags=['satellite', 'v1', 'raw_vault', 'Customers']
 ) }}
 
 {%- set yaml_metadata -%}

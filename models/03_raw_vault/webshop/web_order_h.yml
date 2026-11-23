@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: web_order_h
+    description: "Standard hub for web_order_h"
+    config:
+      tags: ['hub', 'raw_vault', 'WebShop']
+    columns:
+      - name: hk_web_order_h
+        description: "Hash key for web_order_h"
+        data_tests:
+          - unique
+          - not_null
+      - name: web_order_id
+        description: "Business key column"
+        data_tests:
+          - not_null
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

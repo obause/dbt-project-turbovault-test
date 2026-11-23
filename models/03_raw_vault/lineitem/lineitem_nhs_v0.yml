@@ -4,7 +4,7 @@ models:
   - name: lineitem_nhs_v0
     description: "Non-historized satellite for LINEITEM_NL"
     config:
-      tags: ['satellite', 'non_historized', 'raw_vault', 'Lineitem']
+      tags: ['satellite', 'non_historized', 'raw_vault', 'LineItem']
     columns:
       - name: HK_LINEITEM_NL
         description: "Parent entity hash key"

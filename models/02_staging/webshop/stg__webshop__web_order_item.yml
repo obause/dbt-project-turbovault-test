@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg__webshop__web_order_item
+    description: "Staging model for web_order_item from WEBSHOP"
+    config:
+      tags: ['staging', 'webshop']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: hk_web_order_h
+        description: "Hash key"
+      - name: HK_PART_H
+        description: "Hash key"
+      - name: hk_web_order_item_nhl
+        description: "Hash key"

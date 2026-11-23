@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: web_account_details_s_v1
+    description: "Shop account details (MCP test)"
+    config:
+      tags: ['satellite', 'v1', 'raw_vault', 'Test']
+    columns:
+      - name: hk_web_account_h
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_web_account_details_s
+        description: "Hash diff for change detection"
+      - name: email
+        description: "Login email"
+      - name: display_name
+        description: "Payload column"
+      - name: marketing_opt_in
+        description: "Payload column"
+      - name: updated_at
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: load_end_date
+        description: "Load end date (when this version was superseded)"
+      - name: is_current
+        description: "Flag indicating if this is the current version"

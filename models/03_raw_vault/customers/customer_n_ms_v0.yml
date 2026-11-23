@@ -1,24 +1,24 @@
 version: 2
 
 models:
-  - name: part_n_ms_v0
-    description: "Multi-active satellite for PART_H"
+  - name: customer_n_ms_v0
+    description: "Multi-active satellite for CUSTOMER_H"
     config:
-      tags: ['satellite', 'multi_active', 'raw_vault', 'Part']
+      tags: ['satellite', 'multi_active', 'raw_vault', 'Customers']
     columns:
-      - name: HK_PART_H
+      - name: HK_CUSTOMER_H
         description: "Parent entity hash key"
         data_tests:
           - not_null
-      - name: hd_part_n_ms
+      - name: hd_customer_n_ms
         description: "Hash diff for change detection"
-      - name: discount_amount
+      - name: customer_name
         description: "Payload column"
-      - name: discount_minimum_basket_price
+      - name: c_nationkey
         description: "Payload column"
-      - name: discount_level
-        description: "Payload column (multi-active key)"
-      - name: discount_country
+      - name: c_phone
+        description: "Payload column"
+      - name: C_MKTSEGMENT
         description: "Payload column (multi-active key)"
       - name: ldts
         description: "Load date timestamp"

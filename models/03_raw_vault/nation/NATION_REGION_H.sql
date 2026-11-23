@@ -1,11 +1,11 @@
 {{ config(
-    materialized='incremental',
     tags=['hub', 'raw_vault', 'Nation']
 ) }}
 
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__nation
+      rsrc_static: "Nation"
       bk_columns:
           - N_NATIONKEY
           - N_REGIONKEY

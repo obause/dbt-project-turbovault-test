@@ -1,11 +1,11 @@
 {{ config(
-    materialized='incremental',
     tags=['link', 'non_historized', 'raw_vault', 'LineItem']
 ) }}
 
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__lineitem
+      rsrc_static: "LineItem"
 link_hashkey: HK_LINEITEM_NL
 foreign_hashkeys:
     - HK_PART_H

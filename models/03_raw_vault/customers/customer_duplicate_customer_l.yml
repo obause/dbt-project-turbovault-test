@@ -4,7 +4,7 @@ models:
   - name: customer_duplicate_customer_l
     description: "Standard link for customer_duplicate_customer_l"
     config:
-      tags: ['link', 'raw_vault', 'Customer']
+      tags: ['link', 'raw_vault', 'Customers']
     columns:
       - name: hk_customer_duplicate_customer_l
         description: "Link hash key"

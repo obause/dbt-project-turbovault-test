@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: web_account_session_mas_v0
+    description: "Multi-active satellite for web_account_h"
+    config:
+      tags: ['satellite', 'multi_active', 'raw_vault', 'WebShop']
+    columns:
+      - name: hk_web_account_h
+        description: "Parent entity hash key"
+        data_tests:
+          - not_null
+      - name: hd_web_account_session_mas
+        description: "Hash diff for change detection"
+      - name: session_id
+        description: "Payload column (multi-active key)"
+      - name: user_agent
+        description: "Payload column"
+      - name: started_at
+        description: "Payload column"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: rsrc
+        description: "Record source"

@@ -1,13 +1,12 @@
 {{ config(
-    materialized='view',
     tags=['staging', 'tpch']
 ) }}
 
 {%- set yaml_metadata -%}
 source_model:
     tpch: Customer
-ldts: 'sysdate()'
-rsrc: '!Customer'
+ldts: "sysdate()"
+rsrc: "!Customer"
 hashed_columns:
     HK_CUSTOMER_H:
         - C_CUSTKEY
@@ -32,8 +31,8 @@ hashed_columns:
             - C_PHONE
 derived_columns:
     customer_name:
-      value: 'C_name'
-      src_cols_required: 'C_name'
+      value: "C_name"
+      src_cols_required: "C_name"
 multi_active_config:
     multi_active_key: 'C_MKTSEGMENT'
     main_hashkey_column: 'HK_CUSTOMER_H'

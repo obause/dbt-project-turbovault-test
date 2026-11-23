@@ -1,11 +1,11 @@
 {{ config(
-    materialized='incremental',
     tags=['hub', 'raw_vault', 'Region']
 ) }}
 
 {%- set yaml_metadata -%}
 source_models:
     - name: stg__tpch__region
+      rsrc_static: "Region"
       bk_columns:
           - R_NAME
 hashkey: HK_REGION_H

@@ -1,25 +1,23 @@
 version: 2
 
 models:
-  - name: customer_n_ms_v0
-    description: "Multi-active satellite for CUSTOMER_H"
+  - name: test_s_v0
+    description: "Standard satellite for test_h"
     config:
-      tags: ['satellite', 'multi_active', 'raw_vault', 'Customer']
+      tags: ['satellite', 'standard', 'raw_vault', 'Test']
     columns:
-      - name: HK_CUSTOMER_H
+      - name: hk_test_h
         description: "Parent entity hash key"
         data_tests:
           - not_null
-      - name: hd_customer_n_ms
+      - name: hd_test_s
         description: "Hash diff for change detection"
-      - name: customer_name
+      - name: col_b
         description: "Payload column"
-      - name: c_nationkey
+      - name: col_c
         description: "Payload column"
-      - name: c_phone
+      - name: col_d
         description: "Payload column"
-      - name: C_MKTSEGMENT
-        description: "Payload column (multi-active key)"
       - name: ldts
         description: "Load date timestamp"
       - name: rsrc

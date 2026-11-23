@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg__webshop__web_session
+    description: "Staging model for web_session from WEBSHOP"
+    config:
+      tags: ['staging', 'webshop']
+    columns:
+      - name: rsrc
+        description: "Record source identifier"
+      - name: ldts
+        description: "Load date timestamp"
+      - name: hd_web_account_session_mas
+        description: "Hash diff for web_account_session_mas"

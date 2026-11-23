@@ -1,10 +1,10 @@
 version: 2
 
 models:
-  - name: part_n_ms_v1
-    description: "Multi_active satellite v1 (with load_end_date) for PART_H"
+  - name: part_n_ms_v0
+    description: "Multi-active satellite for PART_H"
     config:
-      tags: ['satellite', 'v1', 'raw_vault', 'Part']
+      tags: ['satellite', 'multi_active', 'raw_vault', 'Parts']
     columns:
       - name: HK_PART_H
         description: "Parent entity hash key"
@@ -17,12 +17,10 @@ models:
       - name: discount_minimum_basket_price
         description: "Payload column"
       - name: discount_level
-        description: "Payload column"
+        description: "Payload column (multi-active key)"
       - name: discount_country
-        description: "Payload column"
+        description: "Payload column (multi-active key)"
       - name: ldts
         description: "Load date timestamp"
-      - name: load_end_date
-        description: "Load end date (when this version was superseded)"
-      - name: is_current
-        description: "Flag indicating if this is the current version"
+      - name: rsrc
+        description: "Record source"

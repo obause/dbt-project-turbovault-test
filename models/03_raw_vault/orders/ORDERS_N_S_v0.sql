@@ -1,5 +1,4 @@
 {{ config(
-    materialized='incremental',
     tags=['satellite', 'raw_vault', 'Orders']
 ) }}
 
